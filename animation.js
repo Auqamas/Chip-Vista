@@ -1,3 +1,4 @@
+// rise-animation.js
 document.addEventListener("DOMContentLoaded", () => {
   const elements = document.querySelectorAll(".animate-rise");
 
@@ -7,26 +8,28 @@ document.addEventListener("DOMContentLoaded", () => {
   };
 
   const observer = new IntersectionObserver(
-    (entries, observer) => {
+    (entries, observerInstance) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           animate(entry.target);
-          observer.unobserve(entry.target);
+          observerInstance.unobserve(entry.target);
         }
       });
     },
-    { threshold: 0.2 }
+    { threshold: 0.2 } // Trigger when 20% of element is visible
   );
 
   elements.forEach((el) => {
-    // Observe all matching elements
+    // Set initial hidden state
+    el.classList.add("opacity-0", "translate-y-10", "transition-all", "duration-700");
+
+    // Observe for scroll into view
     observer.observe(el);
 
-    // Animate immediately if in view on load
+    // Animate immediately if already in view on load
     const rect = el.getBoundingClientRect();
-    const inView =
-      rect.top < window.innerHeight && rect.bottom >= 0;
-
-    if (inView) animate(el);
+    if (rect.top < window.innerHeight && rect.bottom >= 0) {
+      animate(el);
+    }
   });
 });
