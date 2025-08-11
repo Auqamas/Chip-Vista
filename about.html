@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chip Vista</title>
+    <link rel="icon" href="Logo's/Logo.svg" media="(prefers-color-scheme: light)">
+    <link rel="icon" href="Logo's/White.svg" media="(prefers-color-scheme: dark)">
+
+    <style>
+      .font-cabin { font-family: "Cabin", sans-serif; font-optical-sizing: auto; font-style: normal; font-variation-settings: "wdth" 100; }
+      @keyframes slide { 0% {   transform: translateX(0%); } 100% {   transform: translateX(-50%); } }
+      .animate-slide { animation: slide 20s linear infinite; }
+      @keyframes float1 { 0% { transform: translateX(-40px) translateY(0) rotate(-60deg); }   50% { transform: translateX(-60px) translateY(30px) rotate(-60deg); }   100% { transform: translateX(-40px) translateY(0) rotate(-60deg); } }
+      @keyframes float2 { 0% { transform: translateX(-120px) translateY(0) rotate(-12deg); }   50% { transform: translateX(-80px) translateY(40px) rotate(-12deg); }   100% { transform: translateX(-60px) translateY(0) rotate(-12deg); } }
+      .animate-float1 { animation: float1 10s ease-in-out infinite; }
+      .animate-float2 { animation: float2 14s ease-in-out infinite; }
+      .animate-scroll { animation: scroll 60s linear infinite;}
+      /* @keyframes scroll {   0% { transform: translateX(0); }   100% { transform: translateX(-50%); } } */
+      .scrollbar-hide::-webkit-scrollbar {display: none; }
+      /* .scrollbar-hide {-ms-overflow-style: none; scrollbar-width: none; } */
+    </style>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&family=Anton&family=Cabin:ital,wght@0,400..700;1,400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=League+Spartan:wght@100..900&family=Liter&family=Londrina+Solid:wght@100;300;400;900&family=Megrim&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Sulphur+Point:wght@300;400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://unpkg.com/preline/dist/preline.js"></script>
+
+</head>
+<body>
+
+    <!-- ========== HEADER ========== -->
+    <header class="font-cabin flex flex-wrap fixed md:justify-start md:flex-nowrap z-50 w-full backdrop-blur-sm border-b border-gray-300">
+      <nav class="relative max-w-[85rem] w-full mx-auto md:flex md:items-center md:justify-between md:gap-3 py-2 px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between items-center">
+          <a id="brand" class="flex gap-2 justify-center items-center transition-all duration-500" href="index.html" aria-label="Brand">
+            <img id="logo" src="Logo's/Logo.svg" width="50" alt="logo" class="transition-all duration-500" />
+            <h1 id="brand-text" class="font-black text-lg transition-all duration-500 whitespace-nowrap">ChipVista</h1>
+          </a>
+            
+          <!-- Collapse Button -->
+          <button type="button" class="hs-collapse-toggle md:hidden relative size-9 flex justify-center items-center font-medium text-sm rounded-lg border border-gray-200 text-gray-800 hover:bg-gray-100 focus:outline-hidden focus:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none" id="hs-header-base-collapse"  aria-expanded="false" aria-controls="hs-header-base" aria-label="Toggle navigation"  data-hs-collapse="#hs-header-base" >
+            <svg class="hs-collapse-open:hidden size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" x2="21" y1="6" y2="6"/><line x1="3" x2="21" y1="12" y2="12"/><line x1="3" x2="21" y1="18" y2="18"/></svg>
+            <svg class="hs-collapse-open:block shrink-0 hidden size-4" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>
+            <span class="sr-only">Toggle navigation</span>
+          </button>
+          <!-- End Collapse Button -->
+        </div>
+    
+        <!-- Collapse -->
+        <div id="hs-header-base" class="hs-collapse hidden overflow-hidden transition-all duration-300 basis-full grow md:block "  aria-labelledby="hs-header-base-collapse" >
+          <div class="overflow-hidden overflow-y-auto max-h-[75vh] [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-track]:bg-gray-100 [&::-webkit-scrollbar-thumb]:bg-gray-300">
+            <div class="py-2 md:py-0  flex flex-col md:flex-row md:items-center gap-0.5 md:gap-1">
+              <div class="grow">
+                <div class="flex flex-col md:flex-row md:justify-end md:items-center gap-0.5 md:gap-1">
+                  <a class="px-4 py-2 flex items-center text-sm text-gray-800 hover:bg-gray-100 rounded-md focus:outline-hidden focus:bg-gray-100" href="index.html">
+                    <svg class="shrink-0 size-4 me-3 md:me-2 block md:hidden" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/><path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
+                    Landing
+                  </a>
+    
+                  <a class="px-4 py-2 flex items-center text-sm text-gray-800 hover:bg-gray-100 rounded-md focus:outline-hidden focus:bg-gray-100" href="service.html">
+                    <svg class="shrink-0 size-4 me-3 md:me-2 block md:hidden" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                    Services
+                  </a>
+    
+                  <a class="px-4 py-2 flex items-center text-sm text-gray-800 hover:bg-gray-100 rounded-md focus:outline-hidden focus:bg-gray-100 px-4 py-2 flex items-center text-[14px] bg-gray-100 text-gray-900 hover:bg-blue-200 rounded-md focus:outline-hidden focus:bg-blue-300" href="about.html" aria-current="page">
+                    <svg class="shrink-0 size-4 me-3 md:me-2 block md:hidden" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 12h.01"/><path d="M16 6V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><path d="M22 13a18.15 18.15 0 0 1-20 0"/><rect width="20" height="14" x="2" y="6" rx="2"/></svg>
+                    About
+                  </a>
+    
+                  <a class="px-4 py-2 flex items-center text-sm text-gray-800 hover:bg-gray-100 rounded-md focus:outline-hidden focus:bg-gray-100" href="project.html">
+                    <svg class="shrink-0 size-4 me-3 md:me-2 block md:hidden" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2Zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2"/><path d="M18 14h-8"/><path d="M15 18h-5"/><path d="M10 6h8v4h-8V6Z"/></svg>
+                    Project
+                  </a>
+                </div>
+              </div>
+    
+              <div class="my-2 md:my-0 md:mx-2">
+                <div class="w-full h-px md:w-px md:h-4 bg-gray-100 md:bg-gray-300"></div>
+              </div>
+    
+              <!-- Button Group -->
+              <div class=" flex flex-wrap items-center gap-x-1.5">
+                <a class="py-2 px-4 inline-flex items-center font-medium text-sm rounded-lg border border-gray-200 bg-white text-gray-800 shadow-2xs hover:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none focus:outline-hidden focus:bg-gray-100" href="contact.html">
+                  Contact Us
+                </a>
+              </div>
+              <!-- End Button Group -->
+            </div>
+          </div>
+        </div>
+        <!-- End Collapse -->
+      </nav>
+    </header>
+
+    <!-- Top Heading's Start -->
+    <section>
+        <div class="font-cabin relative overflow-hidden bg-gradient-to-r from-secondary/5 via-secondary/10 to-secondary/5 py-20 md:py-30 flex items-center justify-center text-center">
+            <div class="absolute inset-0 opacity-30 bg-[radial-gradient(#3b82f6_1px,transparent_1px)] [background-size:20px_20px]"></div>
+            <div class="container relative">
+                <div class="max-w-3xl mx-auto mt-20">
+                    <div class="animate-rise opacity-0 translate-y-10 transition-all duration-700 translate-y-0 transition" style="transition-duration:500ms;transition-delay:100ms">
+                        <h1 class="font-display font-bold text-4xl md:text-5xl lg:text-8xl text-foreground mb-0">
+                            About <span class="text-blue-500">ChipVista</span>
+                        </h1>
+                    </div>
+                    <div class="opacity-100 translate-y-0 transition" style="transition-duration:500ms;transition-delay:200ms">
+                        <p class="animate-rise opacity-0 translate-y-10 transition-all duration-700 text-muted-foreground text-gray-500 text-lg md:text-xl mt-2">
+                            Pioneering the future of technology through innovative electrical engineering solutions
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Top Heading's End -->
+
+    <!-- Slider -->
+    <section class="select-none px-4 sm:px-6 lg:px-8 py-10 font-cabin">
+        <div data-hs-carousel='{"loadingClasses": "opacity-0"}' class="relative">
+          <div class="hs-carousel relative overflow-hidden w-full h-[500px] bg-gray-100 rounded-2xl">
+            <div class="hs-carousel-body absolute top-0 bottom-0 start-0 flex flex-nowrap transition-transform duration-700 opacity-0">
+    
+              <!-- Item -->
+              <div class="hs-carousel-slide">
+                <div class="h-full flex flex-col bg-[url('https://images.unsplash.com/photo-1615615228002-890bb61cac6e?q=80&w=1920&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')] bg-cover bg-center bg-no-repeat">
+                  <div class="mt-auto w-2/3 md:max-w-lg ps-5 pb-5 md:ps-10 md:pb-10">
+                    <span class="block text-white text-xl md:text-2xl">Our Mission</span>
+                    <span class="block text-white text-3xl md:text-5xl">Rewriting sport's playbook for billions of athletes</span>
+                    <div class="mt-5">
+                      <a class="py-2 px-3 inline-flex items-center gap-x-2 text-[15px] font-black rounded-tl-lg rounded-br-lg bg-white border border-transparent text-black hover:bg-gray-100 focus:outline-hidden focus:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none" href="#">  Read Case Studies</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- End Item -->
+    
+              <!-- Item -->
+              <div class="hs-carousel-slide">
+                <div class="h-full flex flex-col bg-[url('https://images.unsplash.com/photo-1612287230202-1ff1d85d1bdf?q=80&w=1920&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')] bg-cover bg-center bg-no-repeat">
+                  <div class="mt-auto w-2/3 md:max-w-lg ps-5 pb-5 md:ps-10 md:pb-10">
+                    <span class="block text-white text-xl md:text-2xl">VPN Proxies</span>
+                    <span class="block text-white text-3xl md:text-5xl">From mobile apps to gaming consoles</span>
+                    <div class="mt-5">
+                      <a class="py-2 px-3 inline-flex items-center gap-x-2 text-[15px] font-black rounded-tl-lg rounded-br-lg bg-white border border-transparent text-black hover:bg-gray-100 focus:outline-hidden focus:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none" href="#">  Read Case Studies</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- End Item -->
+    
+              <!-- Item -->
+              <div class="hs-carousel-slide">
+                <div class="h-full flex flex-col bg-[url('https://images.unsplash.com/photo-1629666451094-8908989cae90?q=80&w=1920&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')] bg-cover bg-center bg-no-repeat">
+                  <div class="mt-auto w-2/3 md:max-w-lg ps-5 pb-5 md:ps-10 md:pb-10">
+                    <span class="block text-white text-xl md:text-2xl">High Speed VPN</span>
+                    <span class="block text-white text-3xl md:text-5xl">Bringing Art to everything</span>
+                    <div class="mt-5">
+                      <a class="py-2 px-3 inline-flex items-center gap-x-2 text-[15px] font-black rounded-tl-lg rounded-br-lg bg-white border border-transparent text-black hover:bg-gray-100 focus:outline-hidden focus:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none" href="#">Read Case Studies</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- End Item -->
+    
+            </div>
+          </div>
+    
+          <!-- Arrows -->
+          <button type="button" class="hs-carousel-prev hs-carousel-disabled:opacity-50 disabled:pointer-events-none absolute inset-y-0 start-0 inline-flex justify-center items-center w-12 h-full text-black hover:bg-white/20 rounded-s-2xl focus:outline-hidden focus:bg-white/20">
+            <span class="text-2xl" aria-hidden="true">
+              <svg class="shrink-0 size-3.5 md:size-4" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"></path>
+              </svg>
+            </span>
+            <span class="sr-only">Previous</span>
+          </button>
+          <button type="button" class="hs-carousel-next hs-carousel-disabled:opacity-50 disabled:pointer-events-none absolute inset-y-0 end-0 inline-flex justify-center items-center w-12 h-full text-black hover:bg-white/20 rounded-e-2xl focus:outline-hidden focus:bg-white/20">
+            <span class="sr-only">Next</span>
+            <span class="text-2xl" aria-hidden="true">
+              <svg class="shrink-0 size-3.5 md:size-4" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"></path>
+              </svg>
+            </span>
+          </button>
+          <!-- End Arrows -->
+    
+        </div>
+    </section>
+    <!-- End Slider -->
+
+    <!-- Details Start -->
+    <section class="bg-transparent py-20 px-6 lg:px-16 font-cabin">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          
+          <!-- Left Text -->
+          <div>
+            <h2 class="mx-auto mt-4 text-6xl leading-[0.85] tracking-[-0.025em] text-balance font-black sm:text-8xl">We’re <br><span class="underline">changing</span> the way people connect</h2>
+            <p class="text-xl sm:lg text-gray-600 mt-5 leading-[1.2]">Founded in 2013, ChipVista emerged from a shared passion for innovation in electrical engineering. What began as a small team of dedicated engineers in a modest workshop has evolved into a leading provider of IoT and embedded systems solutions.</p>
+          </div>
+          <!-- Left Div Text End -->
+      
+          <!-- Right Image Grid -->
+          <div class="grid grid-cols-2 gap-6 relative">
+            <div class="space-y-6 pt-25">
+              <img src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092" alt="" class="rounded-2xl shadow-lg object-cover w-full h-60">
+              <img src="https://images.unsplash.com/photo-1552664730-d307ca884978" alt="" class="rounded-2xl shadow-lg object-cover w-full h-60">
+            </div>
+            <div class="space-y-6 pt-0">
+              <img src="https://images.unsplash.com/photo-1556761175-4b46a572b786" alt="" class="rounded-2xl shadow-lg object-cover w-full h-60">
+              <img src="https://images.unsplash.com/photo-1573497491208-6b1acb260507" alt="" class="rounded-2xl shadow-lg object-cover w-full h-60">
+            </div>
+          </div>
+          <!-- Right Image Grid End -->
+      
+        </div>
+    </section>
+    <!-- Details End -->
+
+    <!-- Stats Section -->
+    <section id="stats" class="font-cabin bg-indigo-100 py-5 border-t border-b border-indigo-300">
+        <div class="max-w-7xl mx-auto px-4">
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+            <!-- Single Stat -->
+            <div>
+              <p class="text-7xl font-bold text-blue-600 stat-num" data-target="150">0</p>
+              <p class="mt-2 text-gray-600">Completed Projects</p>
+            </div>
+            <!-- Repeat for 4 stats -->
+            <div>
+              <p class="text-7xl font-bold text-blue-600 stat-num" data-target="10">0</p>
+              <p class="mt-2 text-gray-600">Years Experience</p>
+            </div>
+            <div>
+              <p class="text-7xl font-bold text-blue-600 stat-num" data-target="40">0</p>
+              <p class="mt-2 text-gray-600">Industry Experts</p>
+            </div>
+            <div>
+              <p class="text-7xl font-bold text-blue-600 stat-num" data-target="25">0</p>
+              <p class="mt-2 text-gray-600">Global Clients</p>
+            </div>
+          </div>
+        </div>
+    </section>
+    <!-- End Stats Section -->
+
+    <!-- Clients Start -->
+    <section class="bg-transparent py-20 px-6 lg:px-16 font-cabin relative">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <!-- Left Logos -->
+            <div class="grid grid-cols-2 gap-6 sm:gap-8">
+                <div class="flex items-center space-x-3">
+                <img src="" alt="Tuple" class="h-6">
+                <span class="font-medium text-gray-900">Tuple</span>
+                </div>
+                <div class="flex items-center space-x-3">
+                <img src="" alt="Reform" class="h-6">
+                <span class="font-medium text-gray-900">Reform</span>
+                </div>
+                <div class="flex items-center space-x-3">
+                <img src="" alt="SavvyCal" class="h-6">
+                <span class="font-medium text-gray-900">SavvyCal</span>
+                </div>
+                <div class="flex items-center space-x-3">
+                <img src="" alt="Laravel" class="h-6">
+                <span class="font-medium text-gray-900">Laravel</span>
+                </div>
+                <div class="flex items-center space-x-3">
+                <img src="" alt="Transistor" class="h-6">
+                <span class="font-medium text-gray-900">Transistor</span>
+                </div>
+                <div class="flex items-center space-x-3">
+                <img src="" alt="Statamic" class="h-6">
+                <span class="font-medium text-gray-900">Statamic</span>
+                </div>
+            </div>
+            <!-- Right Text -->
+            <div>
+                <h2 class="mx-auto text-right mt-4 text-6xl leading-[0.85] tracking-[-0.025em] text-balance font-black sm:text-8xl">Trusted by the most <span class="underline">innovative</span> client's</h2>
+                <p class="text-xl sm:lg text-right text-gray-600 mt-3 mb-8 leading-[1.2]">
+                    Today, ChipVista stands at the forefront of the industry, with a proven track record of delivering cutting-edge solutions that help businesses harness the power of technology to improve efficiency, gain valuable insights, and create new opportunities in an increasingly connected world.</p>
+                <div class="flex flex-wrap gap-4">
+                    <a href="/Start_Pages/log.html" class="bg-blue-700 text-white px-12 py-3 rounded-tl-lg rounded-br-lg hover:bg-blue-600 transition duration-300 ease-in-out">
+                        Create account
+                    </a>
+                    <a href="cont.html" class="flex  px-6 sm:px-15 py-3 bg-black text-white rounded-br-lg rounded-tl-lg font-bold text-center hover:bg-gray-700 transition">
+                        Contact us →
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]" aria-hidden="true">
+    </div>
+
+    </section>
+    <!-- Clients End -->      
+
+    <!-- Footer Start-->
+    <section class="font-cabin relative bg-gradient-to-r from-blue-500 to-[hsl(175,84%,32%)] py-20 px-4 overflow-hidden">
+  
+      <!-- Animated Gradient Circle -->
+      <div class="absolute bottom-10 right-65 opacity-50 animate-pulse">
+        <div class="w-14 h-14 rounded-full border-1 border-white animate-pulse" style="animation-duration:8s"></div>
+        <div class="w-34 h-34 rounded-full border-1 border-white animate-pulse" style="animation-duration:8s"></div>
+      </div>
+    
+      <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6 text-white">
+        <!-- Left Content -->
+        <div class="text-center md:text-left max-w-2xl">
+          <div class="flex items-center justify-center md:justify-start mb-3">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.3">
+              <path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"/>
+            </svg>
+            <h1 class="text-3xl font-bold sm:text-3xl md:text-5xl lg:text-5xl">Ready to innovate with IoT?</h1>
+          </div>
+          <p class="text-base opacity-90">
+            Let's discuss how our IoT and embedded solutions can transform your business operations.
+          </p>
+        </div>
+    
+        <!-- Button -->
+        <div class="flex justify-center md:justify-end w-full md:w-auto">
+          <a href="#contact" class="z-1 py-3 px-12 inline-flex items-center gap-x-2 text-sm font-medium rounded-sm border border-transparent bg-blue-600 text-white hover:bg-blue-700 focus:outline-hidden focus:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none">
+            Get Started
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <footer class="bg-gray-800 text-white font-cabin">
+      <div class="mt-auto w-full max-w-[85rem] py-15 px-4 sm:px-6 lg:px-8 mx-auto">
+        <!-- Grid -->
+        <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-6 mb-10">
+          <div class="col-span-full hidden lg:col-span-1 lg:block">
+            <div class="flex gap-2 items-center transition-all duration-500" aria-label="Brand">
+              <img id="logo" src="Logo's/White.svg" width="50" alt="logo" class="transition-all duration-500" />
+              <h1 class="text-xl transition-all duration-500 whitespace-nowrap">Chip Vista</h1>
+            </div>
+            <p class="mt-3 text-xs sm:text-base leading-[1.2] text-gray-300">Innovating the future with cutting-edge IoT and embedded solutions.</p>
+            <!-- Social Brands -->
+            <div class="space-x-4 mt-5">
+              <a class="inline-block text-gray-200 hover:text-gray-400 focus:outline-hidden focus:text-gray-600" href="#">
+                <svg class="shrink-0 size-5" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                  <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"/>
+                </svg>
+              </a>
+              <a class="inline-block text-gray-200 hover:text-gray-400 focus:outline-hidden focus:text-gray-600" href="#">
+                <svg class="shrink-0 size-5" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                  <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.012 8.012 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+                </svg>
+              </a>
+              <a class="inline-block text-gray-200 hover:text-gray-400 focus:outline-hidden focus:text-gray-600" href="#">
+                <svg class="shrink-0 size-5" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                  <path d="M3.362 10.11c0 .926-.756 1.681-1.681 1.681S0 11.036 0 10.111C0 9.186.756 8.43 1.68 8.43h1.682v1.68zm.846 0c0-.924.756-1.68 1.681-1.68s1.681.756 1.681 1.68v4.21c0 .924-.756 1.68-1.68 1.68a1.685 1.685 0 0 1-1.682-1.68v-4.21zM5.89 3.362c-.926 0-1.682-.756-1.682-1.681S4.964 0 5.89 0s1.68.756 1.68 1.68v1.682H5.89zm0 .846c.924 0 1.68.756 1.68 1.681S6.814 7.57 5.89 7.57H1.68C.757 7.57 0 6.814 0 5.89c0-.926.756-1.682 1.68-1.682h4.21zm6.749 1.682c0-.926.755-1.682 1.68-1.682.925 0 1.681.756 1.681 1.681s-.756 1.681-1.68 1.681h-1.681V5.89zm-.848 0c0 .924-.755 1.68-1.68 1.68A1.685 1.685 0 0 1 8.43 5.89V1.68C8.43.757 9.186 0 10.11 0c.926 0 1.681.756 1.681 1.68v4.21zm-1.681 6.748c.926 0 1.682.756 1.682 1.681S11.036 16 10.11 16s-1.681-.756-1.681-1.68v-1.682h1.68zm0-.847c-.924 0-1.68-.755-1.68-1.68 0-.925.756-1.681 1.68-1.681h4.21c.924 0 1.68.756 1.68 1.68 0 .926-.756 1.681-1.68 1.681h-4.21z"/>
+                </svg>
+              </a>
+            </div>
+            <!-- End Social Brands -->
+          </div>
+          <!-- End Col -->
+
+          <div>
+            <h4 class="text-lg font-black text-blue-500 uppercase">Product</h4>
+
+            <div class="mt-3 grid space-y-3 text-sm">
+              <p><a class="inline-flex text-base gap-x-2 text-gray-200 hover:text-gray-400 focus:outline-hidden focus:text-gray-600" href="#">Pricing</a></p>
+              <p><a class="inline-flex text-base gap-x-2 text-gray-200 hover:text-gray-400 focus:outline-hidden focus:text-gray-600" href="#">Changelog</a></p>
+              <p><a class="inline-flex text-base gap-x-2 text-gray-200 hover:text-gray-400 focus:outline-hidden focus:text-gray-600" href="#">Docs</a></p>
+              <p><a class="inline-flex text-base gap-x-2 text-gray-200 hover:text-gray-400 focus:outline-hidden focus:text-gray-600" href="#">Download</a></p>
+            </div>
+          </div>
+          <!-- End Col -->
+
+          <div>
+            <h4 class="text-lg font-black text-blue-500 uppercase">Company</h4>
+
+            <div class="mt-3 grid space-y-3 text-sm">
+              <p><a class="inline-flex text-base gap-x-2 text-gray-200 hover:text-gray-400 focus:outline-hidden focus:text-gray-600" href="#">About us</a></p>
+              <p><a class="inline-flex text-base gap-x-2 text-gray-200 hover:text-gray-400 focus:outline-hidden focus:text-gray-600" href="#">Customers</a></p>
+              <p><a class="inline-flex text-base gap-x-2 text-gray-200 hover:text-gray-400 focus:outline-hidden focus:text-gray-600" href="#">Newsroom</a></p>
+              <p><a class="inline-flex text-base gap-x-2 text-gray-200 hover:text-gray-400 focus:outline-hidden focus:text-gray-600" href="#">Sitemap</a></p>
+            </div>
+          </div>
+          <!-- End Col -->
+
+          <div>
+            <h4 class="text-lg font-black text-blue-500 uppercase">Resources</h4>
+
+            <div class="mt-3 grid space-y-3 text-sm">
+              <p><a class="inline-flex text-base gap-x-2 text-gray-200 hover:text-gray-400 focus:outline-hidden focus:text-gray-600" href="#">Community</a></p>
+              <p><a class="inline-flex text-base gap-x-2 text-gray-200 hover:text-gray-400 focus:outline-hidden focus:text-gray-600" href="#">Help & Support</a></p>
+              <p><a class="inline-flex text-base gap-x-2 text-gray-200 hover:text-gray-400 focus:outline-hidden focus:text-gray-600" href="#">eBook</a></p>
+            </div>
+          </div>
+          <!-- End Col -->
+
+        </div>
+        <!-- End Grid -->
+
+        <div class="pt-5 mt-5 border-t border-gray-500">
+          <div class="sm:flex sm:justify-between sm:items-center">
+            <div class="flex flex-wrap items-center gap-3">
+              <p class="text-sm text-gray-300">© 2025 ChipVista. All rights reserved.</p>
+            </div>
+
+            <div class="flex flex-wrap mt-7 justify-between items-center gap-3">
+              <div class="col-span-full sm:hidden">
+                <a class="flex gap-1 items-center transition-all duration-500" href="index.html" aria-label="Brand">
+                  <img id="logo" src="Logo's/Logo.svg" width="50" alt="logo" class="transition-all duration-500" />
+                  <h1 class="text-xl transition-all duration-500 whitespace-nowrap">Chip Vista</h1>
+                </a>
+                <p class="mt-2 text-xs sm:text-base leading-[1.2] text-gray-600">Innovating the future with cutting- <br>edge IoT and embedded solutions.</p>
+              </div>
+            </div>
+            <!-- End Col -->
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Footer End-->
+
+    <script src="scroll-effect.js" defer></script>
+    <script src="animation.js" defer></script>
+    <script src="script.js"></script>
+    <script src="stats-animation.js"></script>
+    <script src="reviewScroll.js"></script>
+
+</body>
+</html>
