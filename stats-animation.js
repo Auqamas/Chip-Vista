@@ -1,23 +1,23 @@
 // stats-animation.js
-
 document.addEventListener("DOMContentLoaded", () => {
   const counters = document.querySelectorAll(".stat-num");
   let started = false;
 
   function animateCounters() {
     counters.forEach(counter => {
+      const target = parseFloat(counter.getAttribute("data-target"));
+      const suffix = counter.getAttribute("data-suffix") || ""; // e.g., "+", "%"
+      let count = 0; // Always start from 0
+      const speed = 40;
+      const increment = target / speed;
+
       const updateCount = () => {
-        const target = +counter.getAttribute("data-target");
-        const count = +counter.innerText;
-        const speed = 40;
-
-        const increment = Math.ceil(target / speed);
-
         if (count < target) {
-          counter.innerText = count + increment;
+          count += increment;
+          counter.innerText = Math.floor(count) + suffix;
           setTimeout(updateCount, 20);
         } else {
-          counter.innerText = target + "+";
+          counter.innerText = target + suffix; // Exact final value
         }
       };
 
@@ -35,9 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
       });
     },
-    {
-      threshold: 0.4,
-    }
+    { threshold: 0.4 }
   );
 
   const statsSection = document.querySelector("#stats");
