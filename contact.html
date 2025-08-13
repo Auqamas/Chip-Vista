@@ -3,24 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chip Vista | About</title>
+    <title>Chip Vista | Contact</title>
     <link rel="icon" href="Logo's/Logo.svg" media="(prefers-color-scheme: light)">
     <link rel="icon" href="Logo's/White.svg" media="(prefers-color-scheme: dark)">
-
     <style>
-      .font-cabin { font-family: "Cabin", sans-serif; font-optical-sizing: auto; font-style: normal; font-variation-settings: "wdth" 100; }
-      @keyframes slide { 0% {   transform: translateX(0%); } 100% {   transform: translateX(-50%); } }
-      .animate-slide { animation: slide 20s linear infinite; }
-      @keyframes float1 { 0% { transform: translateX(-40px) translateY(0) rotate(-60deg); }   50% { transform: translateX(-60px) translateY(30px) rotate(-60deg); }   100% { transform: translateX(-40px) translateY(0) rotate(-60deg); } }
-      @keyframes float2 { 0% { transform: translateX(-120px) translateY(0) rotate(-12deg); }   50% { transform: translateX(-80px) translateY(40px) rotate(-12deg); }   100% { transform: translateX(-60px) translateY(0) rotate(-12deg); } }
-      .animate-float1 { animation: float1 10s ease-in-out infinite; }
-      .animate-float2 { animation: float2 14s ease-in-out infinite; }
-      .animate-scroll { animation: scroll 60s linear infinite;}
-      /* @keyframes scroll {   0% { transform: translateX(0); }   100% { transform: translateX(-50%); } } */
-      .scrollbar-hide::-webkit-scrollbar {display: none; }
-      /* .scrollbar-hide {-ms-overflow-style: none; scrollbar-width: none; } */
+        .font-cabin { font-family: "Cabin", sans-serif; font-optical-sizing: auto; font-style: normal; font-variation-settings: "wdth" 100; }
+        @keyframes scroll { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+        .animate-scroll { animation: scroll 20s linear infinite;}
     </style>
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&family=Anton&family=Cabin:ital,wght@0,400..700;1,400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=League+Spartan:wght@100..900&family=Liter&family=Londrina+Solid:wght@100;300;400;900&family=Megrim&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Sulphur+Point:wght@300;400;700&display=swap" rel="stylesheet">
@@ -30,7 +20,7 @@
 </head>
 <body>
 
-    <!-- ========== HEADER ========== -->
+    <!-- HEADER Start -->
     <header class="font-cabin flex flex-wrap fixed md:justify-start md:flex-nowrap z-50 w-full backdrop-blur-sm border-b border-gray-300">
       <nav class="relative max-w-[85rem] w-full mx-auto md:flex md:items-center md:justify-between md:gap-3 py-2 px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between items-center">
@@ -54,22 +44,22 @@
             <div class="py-2 md:py-0  flex flex-col md:flex-row md:items-center gap-0.5 md:gap-1">
               <div class="grow">
                 <div class="flex flex-col md:flex-row md:justify-end md:items-center gap-0.5 md:gap-1">
-                  <a class="px-4 py-2 flex items-center text-sm text-gray-800 hover:bg-gray-100 rounded-md focus:outline-hidden focus:bg-gray-100" href="index.html">
+                  <a class="px-4 py-2 flex items-center text-sm text-gray-800 hover:bg-gray-100 rounded-md focus:outline-hidden focus:bg-gray-100 " href="index.html">
                     <svg class="shrink-0 size-4 me-3 md:me-2 block md:hidden" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 21v-8a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v8"/><path d="M3 10a2 2 0 0 1 .709-1.528l7-5.999a2 2 0 0 1 2.582 0l7 5.999A2 2 0 0 1 21 10v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg>
                     Landing
                   </a>
     
-                  <a class="px-4 py-2 flex items-center text-sm text-gray-800 hover:bg-gray-100 rounded-md focus:outline-hidden focus:bg-gray-100" href="service.html">
+                  <a class="px-4 py-2 flex items-center text-sm text-gray-800 hover:bg-gray-100 rounded-md focus:outline-hidden focus:bg-gray-100" href="service.html" aria-current="page">
                     <svg class="shrink-0 size-4 me-3 md:me-2 block md:hidden" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
                     Services
                   </a>
     
-                  <a class="px-4 py-2 flex items-center text-sm text-gray-800 hover:bg-gray-100 rounded-md focus:outline-hidden focus:bg-gray-100 px-4 py-2 flex items-center text-[14px] bg-gray-100 text-gray-900 hover:bg-blue-200 rounded-md focus:outline-hidden focus:bg-blue-300" href="about.html" aria-current="page">
+                  <a class="px-4 py-2 flex items-center text-sm text-gray-800 hover:bg-gray-100 rounded-md focus:outline-hidden focus:bg-gray-100" href="about.html">
                     <svg class="shrink-0 size-4 me-3 md:me-2 block md:hidden" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 12h.01"/><path d="M16 6V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><path d="M22 13a18.15 18.15 0 0 1-20 0"/><rect width="20" height="14" x="2" y="6" rx="2"/></svg>
                     About
                   </a>
     
-                  <a class="px-4 py-2 flex items-center text-sm text-gray-800 hover:bg-gray-100 rounded-md focus:outline-hidden focus:bg-gray-100" href="project.html">
+                  <a class="px-4 py-2 flex items-center text-[14px] bg-gray-100 text-gray-900 hover:bg-blue-200 rounded-md focus:outline-hidden focus:bg-blue-300" href="project.html">
                     <svg class="shrink-0 size-4 me-3 md:me-2 block md:hidden" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 22h16a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2H8a2 2 0 0 0-2 2v16a2 2 0 0 1-2 2Zm0 0a2 2 0 0 1-2-2v-9c0-1.1.9-2 2-2h2"/><path d="M18 14h-8"/><path d="M15 18h-5"/><path d="M10 6h8v4h-8V6Z"/></svg>
                     Project
                   </a>
@@ -93,6 +83,7 @@
         <!-- End Collapse -->
       </nav>
     </header>
+    <!-- HEADER End -->
 
     <!-- Top Heading's Start -->
     <section>
@@ -101,13 +92,13 @@
             <div class="container relative">
                 <div class="max-w-3xl mx-auto mt-20">
                     <div class="animate-rise opacity-0 translate-y-10 transition-all duration-700 translate-y-0 transition" style="transition-duration:500ms;transition-delay:100ms">
-                        <h1 class="font-display font-bold text-4xl md:text-5xl lg:text-8xl text-foreground mb-0">
-                            About <span class="text-blue-500">ChipVista</span>
+                        <h1 class="font-display font-bold text-7xl md:text-5xl lg:text-8xl text-foreground mb-0">
+                            <span class="text-blue-500">Contact</span> Us
                         </h1>
                     </div>
                     <div class="opacity-100 translate-y-0 transition" style="transition-duration:500ms;transition-delay:200ms">
-                        <p class="animate-rise opacity-0 translate-y-10 transition-all duration-700 text-muted-foreground text-gray-500 text-lg md:text-xl mt-2">
-                            Pioneering the future of technology through innovative electrical engineering solutions
+                        <p class="animate-rise opacity-0 translate-y-10 transition-all duration-700 text-muted-foreground text-gray-500 text-lg md:text-xl mt-0">
+                            Get in touch with our team to discuss your project requirements and how we can help you
                         </p>
                     </div>
                 </div>
@@ -115,206 +106,207 @@
         </div>
     </section>
     <!-- Top Heading's End -->
+    
+    <!-- Contact Det Start -->
+    <section class="font-cabin py-10 px-6">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+            
+            <!-- Left Side -->
+            <div class="space-y-8">
+                <h2 class="text-6xl font-bold">
+                    How Can We <span class="text-blue-500">Help </span>You?
+                </h2>
 
-    <!-- Slider -->
-    <section class="select-none px-4 sm:px-6 lg:px-8 py-10 font-cabin animate-rise opacity-0 translate-y-10 transition-all duration-700">
-        <div data-hs-carousel='{"loadingClasses": "opacity-0"}' class="relative">
-          <div class="hs-carousel relative overflow-hidden w-full h-[500px] bg-gray-100 rounded-2xl">
-            <div class="hs-carousel-body absolute top-0 bottom-0 start-0 flex flex-nowrap transition-transform duration-700 opacity-0">
-    
-              <!-- Item -->
-              <div class="hs-carousel-slide">
-                <div class="h-full flex flex-col bg-[url('https://images.unsplash.com/photo-1615615228002-890bb61cac6e?q=80&w=1920&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')] bg-cover bg-center bg-no-repeat">
-                  <div class="animate-rise opacity-0 translate-y-10 transition-all duration-2000 mt-auto w-2/3 md:max-w-lg ps-5 pb-5 md:ps-10 md:pb-10">
-                    <span class="block text-white text-xl md:text-2xl">Our Mission</span>
-                    <span class="block text-white text-3xl md:text-5xl">Rewriting sport's playbook for billions of athletes</span>
-                    <div class="mt-5">
-                      <a class="py-2 px-3 inline-flex items-center gap-x-2 text-[15px] font-black rounded-sm bg-white border border-transparent text-black hover:bg-gray-100 focus:outline-hidden focus:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none" href="#">  Read Case Studies</a>
+                <!-- Visit Us -->
+                <div class="flex items-start space-x-4">
+                    <div class="bg-blue-100 p-3 rounded-full">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-map-pin" aria-hidden="true"><path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0"></path><circle cx="12" cy="10" r="3"></circle></svg>
                     </div>
-                  </div>
-                </div>
-              </div>
-              <!-- End Item -->
-    
-              <!-- Item -->
-              <div class="hs-carousel-slide">
-                <div class="h-full flex flex-col bg-[url('https://images.unsplash.com/photo-1612287230202-1ff1d85d1bdf?q=80&w=1920&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')] bg-cover bg-center bg-no-repeat">
-                  <div class="mt-auto w-2/3 md:max-w-lg ps-5 pb-5 md:ps-10 md:pb-10">
-                    <span class="block text-white text-xl md:text-2xl">VPN Proxies</span>
-                    <span class="block text-white text-3xl md:text-5xl">From mobile apps to gaming consoles</span>
-                    <div class="mt-5">
-                      <a class="py-2 px-3 inline-flex items-center gap-x-2 text-[15px] font-black rounded-sm bg-white border border-transparent text-black hover:bg-gray-100 focus:outline-hidden focus:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none" href="#">  Read Case Studies</a>
+                    <div>
+                    <h3 class="text-xl font-semibold">Visit Us</h3>
+                    <p class="text-gray-600 leading-7">50 Sector K Commercial <br> DHA Phase 1 Lahore, Punjab<br>Pakistan</p>
                     </div>
-                  </div>
                 </div>
-              </div>
-              <!-- End Item -->
-    
-              <!-- Item -->
-              <div class="hs-carousel-slide">
-                <div class="h-full flex flex-col bg-[url('https://images.unsplash.com/photo-1629666451094-8908989cae90?q=80&w=1920&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')] bg-cover bg-center bg-no-repeat">
-                  <div class="mt-auto w-2/3 md:max-w-lg ps-5 pb-5 md:ps-10 md:pb-10">
-                    <span class="block text-white text-xl md:text-2xl">High Speed VPN</span>
-                    <span class="block text-white text-3xl md:text-5xl">Bringing Art to everything</span>
-                    <div class="mt-5">
-                      <a class="py-2 px-3 inline-flex items-center gap-x-2 text-[15px] font-black rounded-sm bg-white border border-transparent text-black hover:bg-gray-100 focus:outline-hidden focus:bg-gray-100 disabled:opacity-50 disabled:pointer-events-none" href="#">Read Case Studies</a>
+
+                <!-- Email Us -->
+                <div class="flex items-start space-x-4">
+                    <div class="bg-blue-100 p-3 rounded-full">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mail" aria-hidden="true"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"></path><rect x="2" y="4" width="20" height="16" rx="2"></rect></svg>
                     </div>
-                  </div>
+                    <div>
+                    <h3 class="text-xl font-semibold">Email Us</h3>
+                    <p class="text-gray-600 leading-7">General Inquiries: info@chipvista.com<br>
+                        Support: support@chipvista.com<br>
+                        Careers: careers@chipvista.com</p>
+                    </div>
                 </div>
-              </div>
-              <!-- End Item -->
-    
+
+                <!-- Call Us -->
+                <div class="flex items-start space-x-4">
+                    <div class="bg-blue-100 p-3 rounded-full">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-phone" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                    </div>
+                    <div>
+                    <h3 class="text-xl font-semibold">Call Us</h3>
+                    <p class="text-gray-600 leading-7">Main Office: +92 300 0333589</p>
+                    </div>
+                </div>
+
+                <!-- Business Hours -->
+                <div class="flex items-start space-x-4">
+                    <div class="bg-blue-100 p-3 rounded-full">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-clock" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                    </div>
+                    <div>
+                    <h3 class="text-xl font-semibold">Business Hours</h3>
+                    <p class="text-gray-600 leading-7">Monday – Friday: 9:00 AM – 6:00 PM (PST)<br>
+                        Saturday – Sunday: Closed</p>
+                    </div>
+                </div>
+
+                <!-- Social Links -->
+                <div>
+                    <h3 class="text-2xl font-semibold mb-2">Connect With Us</h3>
+                    <div class="flex space-x-4 mt-5">
+                        <a href="#" class="text-gray-800 p-3 rounded-full bg-blue-100 hover:text-white hover:bg-blue-800 transition-all duration-300">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-linkedin" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect width="4" height="12" x="2" y="9"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                        </a>
+                        <a href="#" class="text-gray-800 p-3 rounded-full bg-blue-100 hover:text-white hover:bg-blue-800 transition-all duration-300">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-facebook" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+                        </a>
+                        <a href="#" class="text-gray-800 p-3 rounded-full bg-blue-100 hover:text-white hover:bg-blue-800 transition-all duration-300">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-twitter" aria-hidden="true"><path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"></path></svg>
+                        </a>
+                    </div>
+                </div>
             </div>
-          </div>
-    
-          <!-- Arrows -->
-          <button type="button" class="hs-carousel-prev hs-carousel-disabled:opacity-50 disabled:pointer-events-none absolute inset-y-0 start-0 inline-flex justify-center items-center w-12 h-full text-black hover:bg-white/20 rounded-s-2xl focus:outline-hidden focus:bg-white/20">
-            <span class="text-2xl" aria-hidden="true">
-              <svg class="shrink-0 size-3.5 md:size-4" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0z"></path>
-              </svg>
-            </span>
-            <span class="sr-only">Previous</span>
-          </button>
-          <button type="button" class="hs-carousel-next hs-carousel-disabled:opacity-50 disabled:pointer-events-none absolute inset-y-0 end-0 inline-flex justify-center items-center w-12 h-full text-black hover:bg-white/20 rounded-e-2xl focus:outline-hidden focus:bg-white/20">
-            <span class="sr-only">Next</span>
-            <span class="text-2xl" aria-hidden="true">
-              <svg class="shrink-0 size-3.5 md:size-4" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
-                <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"></path>
-              </svg>
-            </span>
-          </button>
-          <!-- End Arrows -->
-    
+
+            <!-- Right Side (Map Placeholder) -->
+            <div class="bg-gray-100 rounded-lg border border-gray-200 flex flex-col items-center justify-center text-center p-0 overflow-hidden">
+                <!-- Google Map Embed -->
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d6805.623920545361!2d74.39135193485166!3d31.474358467571314!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1s50%20Block%20K%20D.H.A.%20Phase%201!5e0!3m2!1sen!2s!4v1755115817233!5m2!1sen!2s"
+                  width="100%"
+                  height="100%"
+                  style="border:0;"
+                  allowfullscreen=""
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>              
         </div>
     </section>
-    <!-- End Slider -->
+    <!-- Contact Det End -->
 
-    <!-- Details Start -->
-    <section class="bg-transparent py-20 px-6 lg:px-16 font-cabin">
-        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          
-          <!-- Left Text -->
-          <div>
-            <h2 class="animate-rise opacity-0 translate-y-10 transition-all duration-700 mx-auto mt-4 text-6xl leading-[0.85] tracking-[-0.025em] text-balance font-black sm:text-8xl">We’re <br><span class="text-blue-500">changing</span> the way people <span class="text-indigo-500">connect</span></h2>
-            <p class="animate-rise opacity-0 translate-y-10 transition-all duration-700 text-xl sm:lg text-gray-600 mt-5 leading-[1.2]">Founded in 2013, ChipVista emerged from a shared passion for innovation in electrical engineering. What began as a small team of dedicated engineers in a modest workshop has evolved into a leading provider of IoT and embedded systems solutions.</p>
-          </div>
-          <!-- Left Div Text End -->
-      
-          <!-- Right Image Grid -->
-          <div class="grid grid-cols-2 gap-6 relative">
-            <div class="space-y-6 pt-25">
-              <img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/2HeBxqOYeLRiHo3whKMTuB/ae07b820ef9fdd0689e0e9fdd048cd58/iStock-996179448.jpg?w=1500&h=680&q=60&fit=fill&f=faces&fm=jpg&fl=progressive&auto=format%2Ccompress&dpr=1&w=1000" alt="" class="animate-rise opacity-0 translate-y-10 transition-all duration-700 rounded-2xl shadow-lg object-cover w-full h-60">
-              <img src="https://images.unsplash.com/photo-1552664730-d307ca884978" alt="" class="animate-rise opacity-0 translate-y-10 transition-all duration-1000 rounded-2xl shadow-lg object-cover w-full h-60">
-            </div>
-            <div class="space-y-6 pt-0">
-              <img src="https://images.unsplash.com/photo-1556761175-4b46a572b786" alt="" class="animate-rise opacity-0 translate-y-10 transition-all duration-1000 rounded-2xl shadow-lg object-cover w-full h-60">
-              <img src="https://images.unsplash.com/photo-1573497491208-6b1acb260507" alt="" class="animate-rise opacity-0 translate-y-10 transition-all duration-700 rounded-2xl shadow-lg object-cover w-full h-60">
-            </div>
-          </div>
-          <!-- Right Image Grid End -->
-      
+    <!-- Contact Form Start -->
+    <section class="font-cabin py-12 px-6 mt-20">
+      <div class="max-w-6xl mx-auto">
+        <!-- Heading -->
+        <div class="text-center mb-10">
+          <h2 class="text-6xl font-bold">
+            Get In <span class="text-blue-500">Touch</span>
+          </h2>
+          <p class=" text-muted-foreground text-gray-500 text-lg md:text-xl">
+            Have a project in mind? Let's talk about how we can help bring your ideas to life.
+          </p>
         </div>
-    </section>
-    <!-- Details End -->
+    
+        <!-- Content -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+          <!-- Contact Info -->
+          <div class="space-y-6">
+            <h3 class="text-2xl font-semibold">Contact Information</h3>
 
-    <!-- Stats Section -->
-    <section class="bg-white py-12 font-cabin">
-      <div class="max-w-7xl mx-auto px-4 lg:px-8">
-        <div class="grid lg:grid-cols-2 gap-12 items-center">
+            <!-- Phone -->
+            <div class="flex items-center space-x-4">
+              <div class="bg-blue-100 text-blue-600 p-3 rounded-full">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-phone h-5 w-5 text-primary" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+              </div>
+              <div>
+                <h3 class="font-semibold">Phone</h3>
+                <p class="text-gray-600">+92 300 0333589</p>
+              </div>
+            </div>
     
-          <!-- Left content -->
-          <div>
-            <h2 class="animate-rise opacity-0 translate-y-10 transition-all duration-700 mx-auto mt-4 text-6xl leading-[0.85] tracking-[-0.025em] text-balance font-black sm:text-8xl">Powering<span class="text-blue-500"> Progress </span>with Speed</h2>
-            <p class="animate-rise opacity-0 translate-y-10 transition-all duration-700 text-xl sm:lg text-gray-600 mt-5 leading-[1.2]">
-              In the electrical world, speed and precision matter. That’s why Chip Vista gets you connected in seconds, delivering fast, reliable solutions to keep your operations running smoothly.
-            </p>
+            <!-- Email -->
+            <div class="flex items-center space-x-4">
+              <div class="bg-blue-100 p-3 text-blue-600 rounded-full">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mail h-5 w-5 text-primary" aria-hidden="true"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"></path><rect x="2" y="4" width="20" height="16" rx="2"></rect></svg>
+              </div>
+              <div>
+                <h3 class="font-semibold">Email</h3>
+                <p class="text-gray-600">info@chipvista.com</p>
+              </div>
+            </div>
+    
+            <!-- Support -->
+            <div class="flex items-center space-x-4">
+              <div class="bg-blue-100 p-3 text-blue-600 rounded-full">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-message-square h-5 w-5 text-primary" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path></svg>
+              </div>
+              <div>
+                <h3 class="font-semibold">Support</h3>
+                <p class="text-gray-600">support@chipvista.com</p>
+              </div>
+            </div>
+
           </div>
     
-          <!-- Right stats -->
-          <div id="stats" class="grid grid-cols-2 text-center">
-            
-            <!-- Stat 1 -->
-            <div class="py-6 px-4 border-b border-r border-blue-300">
-              <p class="text-7xl font-bold text-blue-600 stat-num" data-target="99.9" data-suffix="%">0</p>
-              <p class="mt-2 text-gray-600">Uptime</p>
-            </div>
-            
-            <!-- Stat 2 -->
-            <div class="py-6 px-4 border-b border-blue-300">
-              <p class="text-7xl font-bold text-blue-600 stat-num" data-target="100" data-suffix="%">0+</p>
-              <p class="mt-2 text-gray-600">Safety Compliance</p>
-            </div>
-            
-            <!-- Stat 3 -->
-            <div class="py-6 px-4 border-r border-blue-300">
-              <p class="text-7xl font-bold text-blue-600 stat-num" data-target="15" data-suffix="%">0+</p>
-              <p class="mt-2 text-gray-600">Increase in operational efficiency</p>
-            </div>
-            
-            <!-- Stat 4 -->
-            <div class="py-6 px-4">
-              <p class="text-7xl font-bold text-blue-600 stat-num" data-target="3" data-suffix="X">0+</p>
-              <p class="mt-2 text-gray-600">Faster installation compared to industry average</p>
+          <!-- Contact Form -->
+          <form id="contactForm" action="https://formsubmit.co/Admin@ChipVista.ai" method="POST" class="bg-white p-6 rounded-md shadow border border-blue-200 space-y-4">
+            <!-- Prevent Spam -->
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_subject" value="New Contact Form Submission">
+            <input type="hidden" name="_template" value="table">
+    
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-sm font-medium mb-1">Full Name *</label>
+                <input type="text" name="Full Name" required placeholder="John Doe" class="w-full border border-blue-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+              </div>
+              <div>
+                <label class="block text-sm font-medium mb-1">Email Address *</label>
+                <input type="email" name="Email" required placeholder="john@example.com" class="w-full border border-blue-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+              </div>
             </div>
     
-          </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-sm font-medium mb-1">Phone Number</label>
+                <input type="text" name="Phone" placeholder="+1 (555) 123-4567" class="w-full border border-blue-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+              </div>
+              <div>
+                <label class="block text-sm font-medium mb-1">Company</label>
+                <input type="text" name="Company" placeholder="Your Company" class="w-full border border-blue-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+              </div>
+            </div>
     
+            <div>
+              <label class="block text-sm font-medium mb-1 ">Service Interested In</label>
+              <select name="Service" class="w-full border border-blue-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                <option>Select a service</option>
+                <option>Web Development</option>
+                <option>App Development</option>
+                <option>UI/UX Design</option>
+              </select>
+            </div>
+    
+            <div>
+              <label class="block text-sm font-medium mb-1">Your Message *</label>
+              <textarea name="Message" required placeholder="Tell us about your project or inquiry..." rows="4" class="w-full border border-blue-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+            </div>
+    
+            <!-- Success Message -->
+            <p id="successMessage" class="hidden text-green-600 text-sm">Message Sent Successfully!</p>
+    
+            <button  type="submit"  id="submitBtn" class="w-full bg-blue-500 hover:bg-blue-600 text-white font-semibold py-3 rounded-lg transition">
+              Send Message
+            </button>
+          </form>
         </div>
       </div>
-    </section>    
-    <!-- End Stats Section -->
-
-    <!-- Clients Start -->
-    <section class="bg-transparent py-20 px-6 lg:px-16 font-cabin relative">
-        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <!-- Left Logos -->
-            <div class="grid grid-cols-2 gap-6 sm:gap-8">
-                <div class="animate-rise opacity-0 translate-y-10 transition-all duration-700 flex items-center space-x-3">
-                <img src="" alt="Tuple" class="h-6">
-                <span class="font-medium text-gray-900">Tuple</span>
-                </div>
-                <div class="animate-rise opacity-0 translate-y-10 transition-all duration-1000 flex items-center space-x-3">
-                <img src="" alt="Reform" class="h-6">
-                <span class="font-medium text-gray-900">Reform</span>
-                </div>
-                <div class="animate-rise opacity-0 translate-y-10 transition-all duration-1000 flex items-center space-x-3">
-                <img src="" alt="SavvyCal" class="h-6">
-                <span class="font-medium text-gray-900">SavvyCal</span>
-                </div>
-                <div class="animate-rise opacity-0 translate-y-10 transition-all duration-1000 flex items-center space-x-3">
-                <img src="" alt="Laravel" class="h-6">
-                <span class="font-medium text-gray-900">Laravel</span>
-                </div>
-                <div class="animate-rise opacity-0 translate-y-10 transition-all duration-700 flex items-center space-x-3">
-                <img src="" alt="Transistor" class="h-6">
-                <span class="font-medium text-gray-900">Transistor</span>
-                </div>
-                <div class="animate-rise opacity-0 translate-y-10 transition-all duration-1000 flex items-center space-x-3">
-                <img src="" alt="Statamic" class="h-6">
-                <span class="font-medium text-gray-900">Statamic</span>
-                </div>
-            </div>
-            <!-- Right Text -->
-            <div>
-                <h2 class="animate-rise opacity-0 translate-y-10 transition-all duration-700 mx-auto text-right mt-4 text-6xl leading-[0.85] tracking-[-0.025em] text-balance font-black sm:text-8xl"><span class="text-blue-600">Trusted</span> by the most <span class="text-blue-600">innovative</span> client's</h2>
-                <p class="animate-rise opacity-0 translate-y-10 transition-all duration-700 text-xl sm:lg text-right text-gray-600 mt-3 mb-8 leading-[1.2]">
-                    Today, ChipVista stands at the forefront of the industry, with a proven track record of delivering cutting-edge solutions that help businesses harness the power of technology to improve efficiency, gain valuable insights, and create new opportunities in an increasingly connected world.</p>
-                <div class="animate-rise opacity-0 translate-y-10 transition-all duration-700 flex flex-wrap gap-4 justify-end">
-                    <a href="/Start_Pages/log.html" class="bg-blue-700 text-white px-12 py-3 rounded-sm hover:bg-blue-600 transition duration-300 ease-in-out">
-                        Create account
-                    </a>
-                    <a href="cont.html" class="flex px-6 sm:px-15 py-3 bg-black text-white rounded-sm font-bold text-center hover:bg-gray-700 transition">
-                        Contact us →
-                    </a>
-                </div>                  
-            </div>
-        </div>
-        <div class="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]" aria-hidden="true">
-    </div>
-
     </section>
-    <!-- Clients End -->      
+    <!-- Contact Form End -->
 
     <!-- Footer Start-->
     <section class="font-cabin relative bg-gradient-to-r from-blue-500 to-[hsl(175,84%,32%)] py-20 px-4 overflow-hidden">
@@ -329,13 +321,10 @@
         <!-- Left Content -->
         <div class="text-center md:text-left max-w-2xl">
           <div class="flex items-center justify-center md:justify-start mb-3">
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8 text-white mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.3">
-              <path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"/>
-            </svg>
-            <h1 class="text-3xl font-bold sm:text-3xl md:text-5xl lg:text-5xl">Ready to innovate with IoT?</h1>
+            <h1 class="text-3xl font-bold sm:text-3xl md:text-5xl lg:text-5xl">Ready to Start Your Next Project?</h1>
           </div>
           <p class="text-base opacity-90">
-            Let's discuss how our IoT and embedded solutions can transform your business operations.
+            Contact us today to discuss your IoT and embedded systems requirements. Our team of experts is ready to help you build innovative solutions.
           </p>
         </div>
     
@@ -443,8 +432,8 @@
     <script src="scroll-effect.js" defer></script>
     <script src="animation.js" defer></script>
     <script src="script.js"></script>
-    <script src="stats-animation.js"></script>
-    <script src="reviewScroll.js"></script>
+    <script src="contact.js"></script>
+    <script src="message-button.js"></script>
 
 </body>
 </html>
