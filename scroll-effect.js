@@ -2,15 +2,18 @@ window.addEventListener('scroll', () => {
   const brandText = document.getElementById('brand-text');
   const logo = document.getElementById('logo');
 
+  // Make sure the logo's transform origin stays in the center
+  logo.style.transformOrigin = 'center center';
+
   if (window.scrollY > 50) {
     brandText.classList.add('opacity-0', 'w-0', 'overflow-hidden');
 
-    // Apply slight rotation to the logo
-    logo.classList.add('rotate-12');
+    // Keep same position but rotate
+    logo.style.transform = 'rotate(12deg)';
   } else {
-    brandText.classList.remove('opacity-0', 'w-0', 'overflow-hidden');
+    brandText.classList.remove('opacity-0', 'overflow-hidden');
 
-    // Reset rotation
-    logo.classList.remove('rotate-12');
+    // Reset rotation without moving
+    logo.style.transform = 'rotate(0deg)';
   }
 });
