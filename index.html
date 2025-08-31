@@ -1,38 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chip Vista | Home</title>
-    <meta name="description" content="ChipVista delivers cutting-edge solutions in IoT and embedded systems that transform ideas into intelligent, connected devices.">
-    <link rel="icon" href="Logo's/Logo.svg" media="(prefers-color-scheme: light)">
-    <link rel="icon" href="Logo's/White.svg" media="(prefers-color-scheme: dark)">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chip Vista | Home</title>
+  <meta name="description" content="ChipVista delivers cutting-edge solutions in IoT and embedded systems that transform ideas into intelligent, connected devices.">
+  <link rel="icon" href="Logo's/Logo.svg" media="(prefers-color-scheme: light)">
+  <link rel="icon" href="Logo's/White.svg" media="(prefers-color-scheme: dark)">
 
-    <style>
-      .font-cabin { font-family: "Cabin", sans-serif; font-optical-sizing: auto; font-style: normal; font-variation-settings: "wdth" 100; }
-      @keyframes slide { 0% {   transform: translateX(0%); } 100% {   transform: translateX(-50%); } }
-      .animate-slide { animation: slide 20s linear infinite; }
-      @keyframes float1 { 0% { transform: translateX(-40px) translateY(0) rotate(-60deg); }   50% { transform: translateX(-60px) translateY(30px) rotate(-60deg); }   100% { transform: translateX(-40px) translateY(0) rotate(-60deg); } }
-      @keyframes float2 { 0% { transform: translateX(-120px) translateY(0) rotate(-12deg); }   50% { transform: translateX(-80px) translateY(40px) rotate(-12deg); }   100% { transform: translateX(-60px) translateY(0) rotate(-12deg); } }
-      .animate-float1 { animation: float1 10s ease-in-out infinite; }
-      .animate-float2 { animation: float2 14s ease-in-out infinite; }
-      .animate-scroll { animation: scroll 60s linear infinite;}
-      /* @keyframes scroll {   0% { transform: translateX(0); }   100% { transform: translateX(-50%); } } */
-      .scrollbar-hide::-webkit-scrollbar {display: none; }
-      /* .scrollbar-hide {-ms-overflow-style: none; scrollbar-width: none; } */
-    </style>
+  <style>
+    .font-cabin { font-family: "Cabin", sans-serif; font-optical-sizing: auto; font-style: normal; font-variation-settings: "wdth" 100; }
+    @keyframes slide { 0% {   transform: translateX(0%); } 100% {   transform: translateX(-50%); } }
+    .animate-slide { animation: slide 20s linear infinite; }
+    @keyframes float1 { 0% { transform: translateX(-40px) translateY(0) rotate(-60deg); }   50% { transform: translateX(-60px) translateY(30px) rotate(-60deg); }   100% { transform: translateX(-40px) translateY(0) rotate(-60deg); } }
+    @keyframes float2 { 0% { transform: translateX(-120px) translateY(0) rotate(-12deg); }   50% { transform: translateX(-80px) translateY(40px) rotate(-12deg); }   100% { transform: translateX(-60px) translateY(0) rotate(-12deg); } }
+    .animate-float1 { animation: float1 10s ease-in-out infinite; }
+    .animate-float2 { animation: float2 14s ease-in-out infinite; }
+    .animate-scroll { animation: scroll 60s linear infinite;}
+    /* @keyframes scroll {   0% { transform: translateX(0); }   100% { transform: translateX(-50%); } } */
+    .scrollbar-hide::-webkit-scrollbar {display: none; }
+    /* .scrollbar-hide {-ms-overflow-style: none; scrollbar-width: none; } */
+  </style>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&family=Anton&family=Cabin:ital,wght@0,400..700;1,400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=League+Spartan:wght@100..900&family=Liter&family=Londrina+Solid:wght@100;300;400;900&family=Megrim&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Sulphur+Point:wght@300;400;700&display=swap" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <script src="https://unpkg.com/preline/dist/preline.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&family=Anton&family=Cabin:ital,wght@0,400..700;1,400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=League+Spartan:wght@100..900&family=Liter&family=Londrina+Solid:wght@100;300;400;900&family=Megrim&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Sulphur+Point:wght@300;400;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <script src="https://unpkg.com/preline/dist/preline.js"></script>
 
 </head>
 <body>
 
+    <!-- Announcment Start -->
+    <div class="w-full bg-gradient-to-r from-purple-800 to-blue-700 font-cabin">
+      <div class="max-w-[85rem] text-[15px] px-4 py-1 sm:px-6 lg:px-8 mx-auto text-center text-white text-sm font-thin">
+        <span class="font-black">Chip Vista - 2025</span>, We’re hiring talented people like you.
+        <a href="careers.html" class="ml-2 px-4 py-[4px] rounded-4xl bg-blue-600 text-white transition-all duration-200 hover:text-white hover:bg-black inline-flex items-center gap-2">
+          <!-- Text -->
+          View Open Roles
+          <!-- Icon -->
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-move-right-icon lucide-move-right"><path d="M18 8L22 12L18 16"/><path d="M2 12H22"/></svg>
+        </a>
+      </div>
+    </div>
+    <!-- Announcment End -->
+
     <!-- ========== HEADER ========== -->
-    <header class="animate-rise opacity-0 translate-y-10 transition-all duration-700 font-cabin flex flex-wrap fixed md:justify-start md:flex-nowrap z-50 w-full backdrop-blur-sm border-b border-gray-300">
+    <header class="animate-rise opacity-0 translate-y-10 transition-all duration-700 font-cabin flex flex-wrap sticky top-0 md:justify-start md:flex-nowrap z-50 w-full backdrop-blur-sm border-b border-gray-300">
       <nav class="relative max-w-[85rem] w-full mx-auto md:flex md:items-center md:justify-between md:gap-3 py-2 px-4 sm:px-6 lg:px-8">
         <div class="flex justify-between items-center">
           <a id="brand" class="flex gap-2 justify-center items-center transition-all duration-500" href="index.html" aria-label="Brand">
